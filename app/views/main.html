@@ -3,6 +3,18 @@
   <div class="panel panel-default">
     <div class="panel-body">
       <form novalidate class="form-inline">
+
+        <!-- <select class="form-control" id="sel1" placeholder="Month">
+          <option>Month</option>
+          <option>January</option>
+          <option>February</option>
+          <option>4</option>
+        </select>
+
+        <input class="form-control" type="text" maxlength="2" placeholder="Day"/>
+
+        <input class="form-control" type="text" maxlength="4" placeholder="Year"/> -->
+
         <label for="inputDate">Birthdate </label>
         <input type="date" id="inputDate" class="form-control" ng-model="date"/>
         <button type="button" class="btn btn-success" ng-click="discover(date)">Discover</button>
