@@ -16,7 +16,7 @@ angular.module('birthdayMovieApp')
 						params: {
 							'api_key': config.key,
 							'sort_by': 'popularity.desc',
-							'language': 'pt',
+							'language': 'en',
 							'primary_release_date.gte': date1,
 							'primary_release_date.lte': date2
 						}

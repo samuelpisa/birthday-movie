@@ -2,22 +2,34 @@
 <div class="row">
   <div class="panel panel-default">
     <div class="panel-body">
+      <h3 class="center">What is your birthdate?</h3>
       <form novalidate class="form-inline">
 
-        <!-- <select class="form-control" id="sel1" placeholder="Month">
-          <option>Month</option>
-          <option>January</option>
-          <option>February</option>
-          <option>4</option>
+        <select class="form-control" id="sel1" placeholder="Month" ng-model="month">
+          <option value="">Month</option>
+          <option value="0">January</option>
+          <option value="1">February</option>
+          <option value="2">March</option>
+          <option value="3">April</option>
+          <option value="4">May</option>
+          <option value="5">June</option>
+          <option value="6">July</option>
+          <option value="7">August</option>
+          <option value="8">September</option>
+          <option value="9">October</option>
+          <option value="10">November</option>
+          <option value="11">December</option>
         </select>
 
-        <input class="form-control" type="text" maxlength="2" placeholder="Day"/>
+        <input class="form-control" type="text" maxlength="2" placeholder="Day" ng-model="day"/>
 
-        <input class="form-control" type="text" maxlength="4" placeholder="Year"/> -->
+        <input class="form-control" type="text" maxlength="4" placeholder="Year" ng-model="year"/> 
 
-        <label for="inputDate">Birthdate </label>
-        <input type="date" id="inputDate" class="form-control" ng-model="date"/>
-        <button type="button" class="btn btn-success" ng-click="discover(date)">Discover</button>
+        <!-- <input type="date" id="inputDate" class="form-control" ng-model="date"/> -->
+        <button type="button" class="btn btn-success" ng-click="discover(month, day, year)">Discover</button>
+
+        <div class="alert alert-warning" role="alert" ng-show="errors">{{errors}}</div>
+
       </form>
     </div>
   </div>
@@ -25,9 +37,9 @@
 
 <div class="row">
 
-  <div class="panel panel-default">
+  <div class="panel panel-default" ng-show="movie">
     <div class="panel-body">
-      <div class="media" ng-show="movie">
+      <div class="media">
         <div class="media-left media-top">
            <img class="media-object" alt="{{movie.title}}" src="http://image.tmdb.org/t/p/w185/{{movie.poster_path}}"/>
         </div>

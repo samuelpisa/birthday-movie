@@ -11,8 +11,13 @@ angular.module('birthdayMovieApp')
   .controller('MainCtrl', ['$scope', '$sce', 'moviedb', 
   	function ($scope, $sce, moviedb) {
    
-		$scope.discover = function(date) {
-			var dateCalc = new Date(date);
+		$scope.discover = function(month, day, year) {
+			try{
+				var dateCalc = new Date(year, month, day);
+			}catch(errors){
+				$scope.errors = "Invalid Date.";
+				return ;
+			}
 			var date2 = dateCalc.toISOString().substring(0,10);
 			dateCalc.setMonth(dateCalc.getMonth() - 2);
 			var date1 = dateCalc.toISOString().substring(0,10);
