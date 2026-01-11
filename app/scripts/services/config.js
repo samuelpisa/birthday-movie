@@ -9,8 +9,7 @@
  */
 angular.module('birthdayMovieApp')
   .constant('config', {
-  	key: 'ff7fa02915424ca79751e6031e46d4a3',
-  	urlMovie: 'http://api.themoviedb.org/3/',
-  	urlYouTube: 'https://www.youtube.com/embed/'
-
+    key: import.meta.env.VITE_TMDB_KEY || '',
+    urlMovie: 'http://api.themoviedb.org/3/',
+    urlYouTube: 'https://www.youtube.com/embed/'
   });
