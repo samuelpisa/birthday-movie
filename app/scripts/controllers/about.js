@@ -8,10 +8,10 @@
  * Controller of the birthdayMovieApp
  */
 angular.module('birthdayMovieApp')
-  .controller('AboutCtrl', function () {
+  .controller('AboutCtrl', [function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
-  });
+  }]);

@@ -8,7 +8,7 @@
  * Service in the birthdayMovieApp.
  */
 angular.module('birthdayMovieApp')
-  .service('moviedb', function ($http, config) {
+  .service('moviedb', ['$http', 'config', function ($http, config) {
     var movieDB = {
 			discover: function(date1, date2){
 				return $http.get(config.urlMovie + 'discover/movie',
@@ -36,4 +36,4 @@ angular.module('birthdayMovieApp')
 			}
 		}
 		return movieDB;
-  });
+  }]);
