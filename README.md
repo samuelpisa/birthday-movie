@@ -1,8 +1,30 @@
 # Discover the movie of your birthdate
 
-Built with Angular and using [The Movie DB API]
+Built with AngularJS and using [The Movie DB API].
 
-[Try here!!]
+## Setup
+
+```bash
+npm install
+```
+
+## Development
+
+```bash
+npm run dev
+```
+
+## Production build
+
+```bash
+npm run build
+npm run preview
+```
+
+## Tests
+
+```bash
+npm test
+```
 
 [The Movie DB API]: <https://www.themoviedb.org/documentation/api>
-[Try here!!]: <http://samfrezza.github.io/birthday-movie>
