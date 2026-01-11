@@ -14,11 +14,13 @@ This app reads the TMDB API key from the `VITE_TMDB_KEY` environment variable at
 
 ### Local development
 
-Create a `.env` file in the project root with:
+Copy `.env.example` to `.env` in the project root and set your key:
 
 ```bash
 VITE_TMDB_KEY=your_tmdb_key_here
 ```
+
+Keep `.env` out of version control because it contains your API key.
 
 ### CI/CD
 
