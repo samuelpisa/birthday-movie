@@ -21,6 +21,11 @@ npm run build
 npm run preview
 ```
 
+## GitHub Pages
+
+1. Run the workflow in `.github/workflows/deploy.yml` to generate and upload the `dist/` artifact.
+2. Enable Pages in **Settings → Pages** and set **Build and deployment** to **GitHub Actions**.
+
 ## Tests
 
 ```bash
