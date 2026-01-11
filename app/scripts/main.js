@@ -16,7 +16,6 @@ await import('angular-resource');
 await import('angular-route');
 await import('angular-sanitize');
 await import('angular-touch');
-await import('angular-filter');
 
 await import('./app');
 await import('./controllers/main');
